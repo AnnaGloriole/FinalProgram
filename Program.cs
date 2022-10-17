@@ -4,6 +4,12 @@ int arLength = int.Parse(Console.ReadLine()!);
 Console.WriteLine("input max string length");
 int maxLength = int.Parse(Console.ReadLine()!);
 
+string[] NewArray = InputArray(arLength);
+
+PrintArray(NewArray);
+Console.Write(" -> ");
+PrintArray(GetTreeDigitArray(NewArray));
+
 string[] InputArray(int Length)
 {
     Console.WriteLine("input array elements");
