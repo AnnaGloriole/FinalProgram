@@ -14,3 +14,26 @@ string[] InputArray(int Length)
     }
     return arrInt;
 }
+
+string[] GetTreeDigitArray(string[] IArray)
+{
+    int LengthArray = 0;
+    string[] emptyArray = new string[] { };
+    for (int i = 0; i < IArray.Length; i++)
+    {
+        if (IArray[i].Length <= 3)
+            LengthArray++;
+    }
+    if (LengthArray == 0) return emptyArray;
+    string[] TreeDigitArray = new string[LengthArray];
+    int n = 0;
+    for (int i = 0; i < IArray.Length; i++)
+    {
+        if (IArray[i].Length <= 3)
+        {
+            TreeDigitArray[n] = IArray[i];
+            n++;
+        }
+    }
+    return TreeDigitArray;
+}
