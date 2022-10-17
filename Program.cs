@@ -37,3 +37,10 @@ string[] GetTreeDigitArray(string[] IArray)
     }
     return TreeDigitArray;
 }
+
+void PrintArray(string[] array)
+{
+    if (array.Length == 0) Console.Write("[]");
+    else
+        Console.Write($"[\"{string.Join("\", \"", array)}\"]");
+}
